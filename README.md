@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # SustainLite - Lightweight Sustainability Web Application
 
 A modern, lightweight web application for tracking and managing daily sustainability activities. Built with React.js, FastAPI, and SQLite.
@@ -251,3 +252,6 @@ Date: January 31, 2026
 ---
 
 **SustainLite** - Making sustainability accessible, one action at a time. 🌱
+=======
+# Sustainlite
+>>>>>>> 3c106f9e861033887f35c48cc8daa92a9fc435b9
