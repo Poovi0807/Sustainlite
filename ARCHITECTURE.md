@@ -465,4 +465,4 @@ The system is designed to be:
 
 **Document Version**: 1.0  
 **Last Updated**: January 31, 2026  
-**Author**: SustainLite Development Team
+**Author**: Panchami
