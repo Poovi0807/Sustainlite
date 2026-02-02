@@ -1,0 +1,37 @@
+
+version: '3.8'
+
+services:
+  frontend:
+    image: node:16-alpine
+    container_name: sustainlite-frontend
+    working_dir: /app
+    volumes:
+      - ./frontend:/app
+    ports:
+      - "3000:3000"
+    command: ["npm", "start"]
+
+  backend:
+    image: python:3.9-slim
+    container_name: sustainlite-backend
+    working_dir: /app
+    volumes:
+      - ./backend:/app
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=sqlite:///./db.sqlite3
+    command: ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
+
+  db:
+    image: nouchka/sqlite3
+    container_name: sustainlite-db
+    volumes:
+      - ./db:/db
+    environment:
+      - SQLITE_DATABASE_PATH=/db/sustainlite.db
+
+networks:
+  default:
+    name: sustainlite-network
